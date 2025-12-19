@@ -116,20 +116,28 @@ li {
 }
 
 .card {
-    min-width: 120px;
-    min-height: 160px;
+    width: 120px;
+    height: 160px;
     flex-shrink: 0;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 10px var(--shadow-card);
     cursor: pointer;
-    transition: 0.3s ease;
+
     background-color: var(--card-bg);
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
+    box-sizing: border-box;
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
+
 
 .card a {
     text-decoration: none;
@@ -161,10 +169,10 @@ li {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 55px #ffffff27;
-    border: 1px solid var(--text-color);
-
+    box-shadow: 0 0 35px #ffffff27;
+    border-color: var(--text-color);
 }
+
 
 
 

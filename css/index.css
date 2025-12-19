@@ -60,3 +60,13 @@
     font-weight: 500;
     margin-top: 10px;
 }
+
+.topGames,
+.recentGames,
+.allGames {
+    overflow: visible;
+}
+
+.content {
+    overflow-x: hidden;
+}
