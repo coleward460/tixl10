@@ -1,13 +1,3 @@
-{
-  "name": "ubg235",
-  "description": "ubg235",
-  "short_name": "ubg235",
-  "icons": [    
-    {
-      "src": "/patch/images/null.png",
-      "sizes": "512x512",
-      "purpose": "maskable",
-      "type": "image/png"
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4282e899c4eb30c8a0ed74f389ba6778bc71e8a8bb3096213d3f1ab97a457d67
+size 230
