@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/play.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <script src="./js/games.js"></script>
+    <title>TIXL</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="index.html"><i data-feather="home"></i></a>
+            </li>
+            <li>
+                <a href="shop.html"><i data-feather="shopping-bag"></i></a>
+            </li>
+            <li>
+                <a href="social.html"><i data-feather="users"></i></a>
+            </li>
+            <li>
+                <a href="utilities.html"><i data-feather="tool"></i></a>
+            </li>
+            <li>
+                <a href="settings.html"><i data-feather="settings"></i></a>
+            </li>
+
+        </ul>
+        <div class="userProfile">
+            <a href="#account"><span class="profile">CW</span></a>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="gameFrame">
+            <h2 id="gameTitle">Loading...</h2>
+
+            <iframe src="//example.com" id="gameFrame"></iframe>
+        </div>
+
+        <button class="fullscreen" onclick="fullscreen()"><i data-feather="maximize"></i></button>
+
+    </div>
+
+
+    <script>
+    </script>
+
+    <script src="js/games.js"></script>
+    <script>
+        feather.replace();
+    </script>
+
+<script>
+    function fullscreen(){
+        const fullscreen = document.getElementById("gameFrame");
+        fullscreen.requestFullscreen();
+    }
+</script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const gameParam = params.get("game");
+
+const gameObj = games.find(g => g.location === gameParam);
+
+if (gameObj) {
+    document.getElementById("gameTitle").textContent = gameObj.name;
+    document.getElementById("gameFrame").src = `./game/${gameObj.location}/index.html`;
+} else {
+    document.getElementById("gameTitle").textContent = "Game Not Found";
+}
+
+</script>
+
+</body>
+
+</html>
