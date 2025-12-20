@@ -1,23 +1,3 @@
-function loadJS(FILE_URL, async = true) {
-  let scriptEle = document.createElement("script");
-
-  scriptEle.setAttribute("src", FILE_URL);
-  scriptEle.setAttribute("type", "text/javascript");
-  scriptEle.setAttribute("async", async);
-
-  document.body.appendChild(scriptEle);
-
-  // Success
-  scriptEle.addEventListener("load", () => {
-    console.log("ubg235 served!");
-  });
-
-   // Error
-  scriptEle.addEventListener("error", () => {
-    console.log("ubg235 error!");
-  });
-}
-
-window.addEventListener("load", function () {
-  loadJS("https://www.ubg235.com/js/ubg235_server_v1_0.js", true);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:96e56fa177ad590e8b83ea810b4dc852bf7ce3733b7b14c014cb8ebf399407a1
+size 593

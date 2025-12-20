@@ -1,23 +1,3 @@
-function loadJS(FILE_URL, async = true) {
-  let scriptEle = document.createElement("script");
-
-  scriptEle.setAttribute("src", FILE_URL);
-  scriptEle.setAttribute("type", "text/javascript");
-  scriptEle.setAttribute("async", async);
-
-  document.body.appendChild(scriptEle);
-
-  // Success
-  scriptEle.addEventListener("load", () => {
-    console.log("ucbg served!");
-  });
-
-   // Error
-  scriptEle.addEventListener("error", () => {
-    console.log("ucbg error!");
-  });
-}
-
-window.addEventListener("load", function () {
-  loadJS("https://important.pages.dev/js/ucbg_server_v33_0.js", true);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:c3f52bb9f0355411103b589ed0ec365dc4741c02b9f5a57b1a95bfb01bbcc4d6
+size 593
